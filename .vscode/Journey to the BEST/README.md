@@ -6,7 +6,7 @@ Competition: [Kaggle Titanic](https://www.kaggle.com/competitions/titanic)
 
 ## Score
 - Version 1: 74.6% accuracy
-- Version 2: XX% accuracy (after feature engineering)
+- Version 2: 75.1% accuracy (after feature engineering)
 
 ## Approach
 1. Exploratory Data Analysis — analysed survival by age, sex, class
