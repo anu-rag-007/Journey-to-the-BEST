@@ -4,53 +4,81 @@ Project 07 Sleep Research Assistant
 A command-line tool for sleep neuroscience research queries.
 """
 
-import anthropic
-import textwrap
-
 SYSTEM = """You are an expert sleep neuroscience research 
-assistant helping with Project 07 — a closed-loop BCI system
+assistant helping with Project 07 ï¿½ a closed-loop BCI system
 for automated lucid dream induction (LUCID: Reality?).
 Be technically precise, cite relevant work, and give
 actionable advice."""
 
-def main():
-    client = anthropic.Anthropic()
-    history = []
+import os
+from dotenv import load_dotenv
+from google import genai
+from google.genai import types
 
-    print("Sleep Research Assistant — Project 07")
-    print("Type 'quit' to exit, 'clear' to reset\n")
+load_dotenv()
 
-    while True:
-        user_input = input("You: ").strip()
 
-        if user_input.lower() == 'quit':
-            break
-        if user_input.lower() == 'clear':
-            history = []
-            print("Conversation cleared.\n")
-            continue
-        if not user_input:
-            continue
+client = genai.Client(
+    api_key=os.getenv("GEMINI_API_KEY")
+)
 
-        history.append({
-            "role": "user", 
-            "content": user_input
+
+class SleepResearchChat:
+    """
+    Multi-turn conversation with memory using Gemini.
+    Maintains full conversation history.
+    """
+
+    def __init__(self, system_prompt):
+        self.system = system_prompt
+        self.history = []
+
+    def chat(self, user_message):
+        # Save user message
+        self.history.append({
+            "role": "user",
+            "content": user_message
         })
 
-        response = client.messages.create(
-            model      = "claude-sonnet-4-6",
-            max_tokens = 500,
-            system     = SYSTEM,
-            messages   = history
+        # Build conversation history
+        conversation = ""
+
+        for msg in self.history:
+            if msg["role"] == "user":
+                conversation += f"User: {msg['content']}"
+            else:
+                conversation += f"Assistant: {msg['content']}"
+
+        # Generate response
+        response = client.models.generate_content(
+            model="gemini-3.1-flash-lite",
+            contents=conversation,
+            config=types.GenerateContentConfig(
+                system_instruction=self.system,
+                temperature=0.4,
+                max_output_tokens=500
+            )
         )
 
-        reply = response.content[0].text
-        history.append({
+        assistant_reply = response.text
+
+        # Save assistant reply
+        self.history.append({
             "role": "assistant",
-            "content": reply
+            "content": assistant_reply
         })
 
-        print(f"\nAssistant: {textwrap.fill(reply, 70)}\n")
+        return assistant_reply
 
-if __name__ == "__main__":
-    main()
+    def clear(self):
+        self.history = []
+        print("Conversation cleared.")
+
+    def show_history(self):
+        print(f"Conversation length: {len(self.history)} turns")
+
+        for i, msg in enumerate(self.history, 1):
+            print(f"[{i}] {msg['role'].upper()}:")
+            print(msg["content"][:100] + "...")
+            print()
+
