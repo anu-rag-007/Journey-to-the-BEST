@@ -55,13 +55,13 @@ automated REM detection provides.
 
 We address two coupled challenges:
 
-1. **Sleep stage classification**: accurately identifying
-   sleep stages — particularly the brief N1 transition and
-   REM — from single-channel EEG in a computationally
+1. **Sleep stage classification**: Accurately identifying
+   sleep stages — particularly the brief 'N1 transition' and
+   'REM' — from single-channel EEG in a computationally
    efficient manner suitable for real-time deployment.
 
-2. **Closed-loop trigger design**: translating classification
-   output into safe, effective haptic stimulation with
+2. **Closed-loop trigger design**: Translating classification
+   output into safe, effective 'haptic stimulation' with
    appropriate safety interlocks to avoid disrupting sleep.
 
 ### Gap in existing work
@@ -70,12 +70,12 @@ Prior deep learning approaches [4,5,6] achieve high accuracy
 on offline benchmark datasets but rarely address real-time
 deployment constraints or closed-loop feedback integration.
 Models optimised for maximum benchmark accuracy often require
-multi-channel PSG setups impractical for home use or
+multi-channel 'PSG' setups impractical for home use or
 wearable deployment.
 
 ### Our contributions
 
-1. A CNN-LSTM hybrid achieving κ=0.67 LOSO on Sleep-EDF
+1. A CNN-LSTM hybrid achieving κ=0.67 'LOSO' on Sleep-EDF
    using single-channel EEG — competitive with published
    multi-channel approaches.
 
@@ -324,7 +324,7 @@ the exact configuration we target.
 
 ### Future work
 
-1. Expand to full Sleep-EDF (78 recordings)
+1. Expand to full Sleep-EDF (153 recordings)
 2. Add EOG channel for improved REM detection
 3. Real-time validation with consumer EEG hardware
 4. Prospective study: measure lucid dream induction rate
