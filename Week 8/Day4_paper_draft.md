@@ -263,7 +263,7 @@ features do not transfer effectively to EEG spectrograms.
 | N3    | 0.81      | 0.90   | 0.85 | —    |
 | REM   | 0.79      | 0.83   | 0.81 | —    |
 
-Overall accuracy: 80.14% | Kappa: 0.71 | MCC: [fill]
+Overall accuracy: 80.14% | Kappa: 0.71 
 
 **LOSO evaluation:**
 
