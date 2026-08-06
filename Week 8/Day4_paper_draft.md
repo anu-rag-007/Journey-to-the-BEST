@@ -236,8 +236,8 @@ same dataset and train/test split:
 |------------|-------------------|----------|-------|
 | 001        | SleepLSTM         | 76.85%   | —     |
 | 002        | CNN Spectrograms  | 71.67%   | —     |
-| 003        | CNN-LSTM Hybrid   | 80.14%   | 0.71  |
-| 004        | CNN+Transformer   | 79.00%   | —     |
+| 003        | CNN-LSTM Hybrid   | 80.14%   | 0.7128  |
+| 004        | CNN+Transformer   | 79.00%   | 0.7003   |
 
 The CNN-LSTM hybrid (Experiment 003) achieves the best
 overall accuracy. The transformer's underperformance
@@ -257,13 +257,13 @@ features do not transfer effectively to EEG spectrograms.
 
 | Stage | Precision | Recall | F1   | AUC  |
 |-------|-----------|--------|------|------|
-| Wake  | 0.71      | 0.63   | 0.67 | —    |
-| N1    | 0.39      | 0.61   | 0.47 | —    |
-| N2    | 0.91      | 0.80   | 0.86 | —    |
-| N3    | 0.81      | 0.90   | 0.85 | —    |
-| REM   | 0.79      | 0.83   | 0.81 | —    |
+| Wake  | 0.71      | 0.63   | 0.67 | 0.9532    |
+| N1    | 0.39      | 0.61   | 0.47 | 0.9027    |
+| N2    | 0.91      | 0.80   | 0.86 | 0.9415    |
+| N3    | 0.81      | 0.90   | 0.85 | 0.9829    |
+| REM   | 0.79      | 0.83   | 0.81 | 0.9623    |
 
-Overall accuracy: 80.14% | Kappa: 0.71 
+Overall accuracy: 80.14% | Kappa: 0.7128 | MCC: 0.7161
 
 **LOSO evaluation:**
 
