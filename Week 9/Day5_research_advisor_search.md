@@ -19,7 +19,7 @@
     Professor: Anant Jain, Indian Institute of Technology, Delhi, India
     Department: Department of Electrical Engineering
     Email: anantjain@ee.iitd.ac.in
-    Status: [ ] Not emailed [✅] Emailed [ ] Replied
+    Status: [ ] Not emailed [✅] Emailed [✅] Replied
 
     Professor: Shubhendu Bhasin, Indian Institute of Technology, Delhi, India
     Department: Department of Electrical Engineering
@@ -29,12 +29,12 @@
     Professor: Sitikantha Roy, Indian Institute of Technology, Delhi, India
     Department: Department of Applied Mechanics
     Email: sroy@am.iitd.ac.in
-    Status: [✅] Not emailed [ ] Emailed [ ] Replied
+    Status: [ ] Not emailed [✅] Emailed [ ] Replied
 
     Professor: Lalan Kumar, Indian Institute of Technology, Delhi, India
     Department: Bharti School of Telecommunication & Department of Electrical Engineering
     Email: lkumar@ee.iitd.ac.in
-    Status: [✅] Not emailed [ ] Emailed [ ] Replied
+    Status: [ ] Not emailed [✅] Emailed [ ] Replied
 
     CONNECTION: They all were part of a published research paper on arXiv on Title: "EEG-based 90-Degree Turn
     Intention Detection for Brain-Computer Interface"which directly connects to our Project 07 as it includes both
@@ -50,3 +50,12 @@ Week 10: Email professors 4, 5, 6
 Week 10: Email professors 7, 8, 9, 10
 
 ## Responses
+
+Professor Jain Response:
+
+[Hi Anurag,
+I hope this email finds you well.
+
+I'm not currently eligible to endorse for cs.LG, but cs.HC and eess.SP.
+Hope it helps.]
+
