@@ -58,18 +58,21 @@ LUCID: Reality?
 
 # Weekly Roadmap
 
-| Week   | Focus                    | Highlights                                                                  |
-| ------ | ------------------------ | --------------------------------------------------------------------------- |
-| **01** | ML Foundations           | Python, data manipulation, Titanic, EDA                                     |
-| **02** | Mathematical Foundations | NumPy, arrays, broadcasting, matrices, statistics, linear regression        |
-| **03** | Classical ML             | Probability, distributions, Naive Bayes, Logistic Regression, pipelines     |
-| **04** | Neural Networks          | Forward propagation, backpropagation, MNIST, NumPy → PyTorch                |
-| **05** | Computer Vision          | Convolution, CNN architecture, MNIST, CIFAR-10                              |
-| **06** | Advanced Vision          | Transfer learning, fine-tuning, Grad-CAM, object detection                  |
-| **07** | Modern Deep Learning     | CNN-LSTM, attention, Transformers, Hugging Face, LLM APIs                   |
-| **08** | EEG & Research           | EEG Transformers, evaluation, cross-subject validation, hardware pipeline   |
-| **09** | Research Development     | Experiments, publication figures, reinforcement learning, research planning |
-| **10** | Generative AI            | Diffusion models, Stable Diffusion, CLIP, NeRF, 3D scene generation         |
+| Week   | Focus                    | Highlights                                                                       |
+| ------ | ------------------------ | ---------------------------------------------------------------------------------|
+| **01** | ML Foundations           | Python, data manipulation, Titanic, EDA                                          |
+| **02** | Mathematical Foundations | NumPy, arrays, broadcasting, matrices, statistics, linear regression             |
+| **03** | Classical ML             | Probability, distributions, Naive Bayes, Logistic Regression, pipelines          |
+| **04** | Neural Networks          | Forward propagation, backpropagation, MNIST, NumPy → PyTorch                     |
+| **05** | Computer Vision          | Convolution, CNN architecture, MNIST, CIFAR-10                                   |
+| **06** | Advanced Vision          | Transfer learning, fine-tuning, Grad-CAM, object detection                       |
+| **07** | Modern Deep Learning     | CNN-LSTM, attention, Transformers, Hugging Face, LLM APIs                        |
+| **08** | EEG & Research           | EEG Transformers, evaluation, cross-subject validation, hardware pipeline        |
+| **09** | Research Development     | Experiments, publication figures, reinforcement learning, research planning      |
+| **10** | Generative AI            | Diffusion models, Stable Diffusion, CLIP, NeRF, 3D scene generation              |
+| **11** | EEG & Generative AI      | THINGS-EEG exploration, CLIP image targets, alignment training, ATM architecture |
+| **12** | Multimodal Systems       | Image CLIP embeddings, 63-channel ATM, evaluation/generation, Phase 2 paper draft|
+| **13** | Research Completion	    | Individual subject training, Paper 2 figures, final paper submission             |
 
 ---
 
@@ -119,6 +122,20 @@ Explored:
 * Research-oriented AI assistants
 
 ---
+
+## EEG, Multimodal Alignment & Generative AI
+
+Transitioned from general deep learning into a specialized research pipeline combining neurotechnology and generative AI.
+
+Key work includes:
+
+* THINGS-EEG Dataset: Exploration and preprocessing of the THINGS-EEG dataset.
+* CLIP Image Targets: Utilizing CLIP embeddings as targets for EEG alignment and generation.
+* Alignment Training: Training models to align EEG representations with visual/image embeddings.
+* ATM Architecture: Designing and implementing a 63-channel ATM (Attention-based) architecture.
+* Phase 2 Paper Draft: Documenting the methodology, experiments, and results in LUCID_Phase2_paper_draft.md.
+* Individual Subject Training: Fine-tuning models on individual subjects for the final paper.
+* Publication Figures: Generating comparative analysis figures (phase2_full_comparison.png) for the final submission.
 
 ## From Learning to Research
 
@@ -202,6 +219,9 @@ Journey-to-the-BEST/
 ├── Week 8/
 ├── Week 9/
 ├── Week 10/
+├── Week 11/
+├── Week 12/
+├── Week 13/
 │
 ├── .gitignore
 ├── .gitattributes
@@ -265,9 +285,8 @@ Large datasets and generated artifacts are intentionally excluded where appropri
 
 # What Comes Next?
 
-The learning journey does not end at Week 10.
-
-The next stage is to spend less time only learning individual concepts and more time **combining them into complete systems**.
+The learning journey does not end at Week 13.
+The next stage is to spend less time only learning individual concepts and more time combining them into complete systems.
 
 Current direction:
 
